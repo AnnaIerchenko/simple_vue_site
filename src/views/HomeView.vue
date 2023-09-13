@@ -15,17 +15,26 @@
         </div>
       </div>
     </div>
+    <FeaturesVue :data="featuresData"/>
   </div>
 </template>
 
 <script>
 import Carousel from '@/components/Carousel.vue';
+import FeaturesVue from '@/components/FeaturesVue.vue';
+import {featuresData} from '../data/data.features'
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Home',
   components: {
-    Carousel
+    Carousel,
+    FeaturesVue,
+  },
+  data() {
+    return {
+      featuresData: featuresData,
+    }
   }
 }
 </script>
