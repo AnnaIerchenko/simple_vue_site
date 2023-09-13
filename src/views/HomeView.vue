@@ -16,13 +16,15 @@
       </div>
     </div>
     <FeaturesVue :data="featuresData"/>
+    <PropertiesVue :propertiesData="propertiesData"/>
   </div>
 </template>
 
 <script>
 import Carousel from '@/components/Carousel.vue';
 import FeaturesVue from '@/components/FeaturesVue.vue';
-import {featuresData} from '../data/data.features'
+import {featuresData, propertiesData } from '../data/data.dummy'
+import PropertiesVue from '@/components/PropertiesVue.vue';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
@@ -30,10 +32,12 @@ export default {
   components: {
     Carousel,
     FeaturesVue,
+    PropertiesVue
   },
   data() {
     return {
       featuresData: featuresData,
+      propertiesData: propertiesData
     }
   }
 }
