@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import { menuList} from '../constants/MenuLinks'
+
 export default {
   name: 'HeaderWorld',
   props: {
@@ -33,13 +35,7 @@ export default {
   },
   data() {
     return {
-      headerMenuList: [
-        {name: 'Home', path: "/"},
-        {name: 'about Us', path: "/about"},
-        {name: 'Property', path: "/property"},
-        {name: 'Our Blog', path: "/blog"},
-        {name: 'Contacts', path: "/contacts"},
-      ]
+      headerMenuList: menuList,
     }
   }
 }
