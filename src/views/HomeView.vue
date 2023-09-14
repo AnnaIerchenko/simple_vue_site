@@ -21,6 +21,9 @@
     <div class="home__slider">
       <carousel-pic-content />
     </div>
+    <div class="home__banner">
+      <home-banner />
+    </div>
   </div>
 </template>
 
@@ -30,6 +33,7 @@ import FeaturesVue from '@/components/FeaturesVue.vue';
 import {featuresData, propertiesData } from '../data/data.dummy'
 import PropertiesVue from '@/components/PropertiesVue.vue';
 import CarouselPicContent from '@/components/CarouselPicContent.vue';
+import HomeBanner from '@/components/HomeBanner.vue'
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
@@ -38,7 +42,8 @@ export default {
     Carousel,
     FeaturesVue,
     PropertiesVue,
-    CarouselPicContent
+    CarouselPicContent,
+    HomeBanner
   },
   data() {
     return {
