@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Carousel />
+    <carousel />
     <div class="container home__offering">
       <div class="row">
         <div class="col-md-4 home__border">
@@ -15,8 +15,12 @@
         </div>
       </div>
     </div>
-    <FeaturesVue :data="featuresData"/>
-    <PropertiesVue :propertiesData="propertiesData"/>
+    <featuresVue :data="featuresData"/>
+    <propertiesVue :propertiesData="propertiesData"/>
+
+    <div class="home__slider">
+      <carousel-pic-content />
+    </div>
   </div>
 </template>
 
@@ -25,6 +29,7 @@ import Carousel from '@/components/Carousel.vue';
 import FeaturesVue from '@/components/FeaturesVue.vue';
 import {featuresData, propertiesData } from '../data/data.dummy'
 import PropertiesVue from '@/components/PropertiesVue.vue';
+import CarouselPicContent from '@/components/CarouselPicContent.vue';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
@@ -32,7 +37,8 @@ export default {
   components: {
     Carousel,
     FeaturesVue,
-    PropertiesVue
+    PropertiesVue,
+    CarouselPicContent
   },
   data() {
     return {
